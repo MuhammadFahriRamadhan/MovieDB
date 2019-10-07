@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginLeft="@dimen/spacing_medium"
+        android:layout_marginRight="@dimen/spacing_medium"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:layout_marginBottom="@dimen/spacing_small"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:layout_marginLeft="@dimen/spacing_medium"
+            android:layout_marginRight="@dimen/spacing_medium"
+            android:layout_marginTop="@dimen/spacing_small">
+
+        <ImageView
+                android:id="@+id/img_tvshows"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:background="@color/light_gray"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+        />
+
+        <TextView
+                android:id="@+id/tv_titleshow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_medium"
+                android:text="@string/str_title"
+                android:textSize="@dimen/letter_medium"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/img_tvshows"
+                app:layout_constraintTop_toTopOf="@+id/img_tvshows"
+        />
+
+        <TextView
+                android:id="@+id/tv_overviewshow"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:maxLength="50"
+                android:text="@string/str_overview"
+                app:layout_constraintStart_toStartOf="@+id/tv_titleshow"
+                app:layout_constraintTop_toBottomOf="@+id/tv_titleshow"
+        />
+
+        <TextView
+                android:id="@+id/tv_releasedateshow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/release_date"
+                android:textSize="@dimen/letter_medium"
+                app:layout_constraintStart_toStartOf="@+id/tv_overviewshow"
+                app:layout_constraintTop_toBottomOf="@+id/tv_overviewshow"
+        />
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
